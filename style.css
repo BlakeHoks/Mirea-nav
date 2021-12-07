@@ -211,7 +211,7 @@ html, body {
     float: left;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 480px) {
     .navBlock{
         flex-flow: column-reverse;
     }
