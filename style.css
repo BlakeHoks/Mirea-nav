@@ -166,7 +166,7 @@ html, body {
 }
 
 .containerGal h2{
-    font-size: 50px;
+    font-size: 40px;
     margin: 20px 0 0 20px;
 }
 
@@ -251,6 +251,10 @@ html, body {
         width: 300px;
         height: 200px;
         margin: 0 10px;
+    }
+    .containerGal h2{
+        font-size: 30px;
+        margin: 20px 0 0 20px;
     }
 }
 
