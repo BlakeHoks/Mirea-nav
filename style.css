@@ -168,6 +168,7 @@ html, body {
 .containerGal h2{
     font-size: 40px;
     margin: 20px 0 0 20px;
+    position: relative;
 }
 
 .slide_container{
@@ -175,10 +176,6 @@ html, body {
     padding-top: 0;
     margin: 0;
     display: flex;
-}
-
-.containerGal h2{
-    position: relative;
 }
 
 .slide_img{
