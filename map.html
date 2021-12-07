@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="map_html">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirea nav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body class="map_body">
+<div class="navBlock navBlockR">
+    <div class="menu menuR" id="Menu">
+        <div class="menuItem"><a href="main.html">Главная</a></div>
+        <div class="menuItem"><a href="photos.html">Кампусы</a></div>
+        <div class="menuItem"><a href="map.html">Карта</a></div>
+        <div class="menuItem"><a href="dorm.html">Общежития</a></div>
+        <div class="menuItem"><a href="history.html">История</a></div>
+    </div>
+    <div class="imgs">
+        <a href="main.html"><div class="logo"></div></a>
+        <button id="ddmI" onclick="dropDown()" class="menuImg"></button>
+    </div>
+</div>
+<div class="block_map">
+    <div class="map" id="map"><h2>Схема аудиторий кампуса по адресу Проспект Вернадского, 78</h2></div>
+    <div class="map_btns_block">
+        <div class="map_btn" id="floor_0" onclick="change_map_floor(id)">Этаж 0</div>
+        <div class="map_btn" id="floor_1" onclick="change_map_floor(id)">Этаж 1</div>
+        <div class="map_btn" id="floor_2" onclick="change_map_floor(id)">Этаж 2</div>
+        <div class="map_btn" id="floor_3" onclick="change_map_floor(id)">Этаж 3</div>
+        <div class="map_btn" id="floor_4" onclick="change_map_floor(id)">Этаж 4</div>
+    </div>
+</div>
+</body>
+</html>

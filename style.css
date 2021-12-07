@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+html, body {
+    margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: mintcream;
+    color: #182294;
+}
+.map_body{
+    height: 100%;
+}
+
+.map_html{
+    height: 100%;
+}
+
+.navBlock{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: #291A52;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.navBlockR{
+    background-color: mintcream;
+}
+.menu{
+    flex: 9;
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    text-decoration: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    margin: 10px 20px 0 20px;
+    font-size: 34px;
+    transition: .4s ease-in-out;
+    font-weight: bold;
+    color: mintcream;
+}
+
+.navBlockR a{
+    color: #291A52;
+}
+
+.menu a:hover{
+    color: #E08660;
+}
+
+.logo{
+    cursor: pointer;
+    background-image: url("imgs/logo.png");
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    box-sizing: content-box;
+}
+
+.imgs{
+    box-sizing: content-box;
+    margin-right: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.menuImg{
+    display: none;
+}
+
+.block_map{
+    z-index: 0;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    width: 100%;
+    height: 92.3%;
+    background-color: #291A52;
+}
+
+.map{
+    flex-grow: 300;
+    background-image: url(imgs/map/2.svg);
+    background-position: center;
+    background-size: 93%;
+    background-repeat: no-repeat;
+    color: mintcream;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: right;
+}
+
+.map h2{
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.map_btns_block{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.map_btn{
+    margin: auto;
+    width: 100px;
+    border-radius: 10px;
+    text-align: center;
+    height: 50px;
+    background-color: mintcream;
+    color: #0A0321;
+    line-height: 50px;
+    font-size: 30px;
+    overflow: auto;
+    transition: .4s ease-in-out;
+}
+
+.map_btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.container{
+    background-color: mintcream;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    border-radius: 20px;
+}
+
+.content{
+    padding: 20px;
+    margin: 0;
+}
+
+.content h1{
+    margin: 0;
+    font-size: 50px;
+}
+
+.content h2{
+    margin: 0;
+    font-size: 35px;
+}
+
+.content p{
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.main_page_img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.containerGal h2{
+    font-size: 50px;
+    margin: 20px 0 0 20px;
+}
+
+.slide_container{
+    padding: 20px;
+    padding-top: 0;
+    margin: 0;
+    display: flex;
+}
+
+.containerGal h2{
+    position: relative;
+}
+
+.slide_img{
+    width: 90%;
+    height: auto;
+    max-height: 700px;
+    border-radius: 20px;
+    flex: 90;
+}
+
+.side_block{
+    flex: 5;
+    display: flex;
+    align-items: center;
+}
+
+.dorm_img{
+    width: 400px;
+    height: 250px;
+    margin: 0 10px;
+}
+
+.hist_imgs_r{
+    margin: 15px 0 15px 15px;
+    float: right;
+}
+
+.hist_imgs_l{
+    margin: 15px 15px 15px 0;
+    float: left;
+}
+
+@media (max-width: 480px) {
+    .navBlock{
+        flex-flow: column-reverse;
+    }
+    .imgs{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menuImg{
+        display: flex;
+        border: none;
+        background-color: #291A52;
+        cursor: pointer;
+        background-image: url(imgs/menu.png);
+        width: 70px;
+        height: 70px;
+        background-size: 70px 70px;
+        margin-right: 10px;
+    }
+    .navBlockR .imgs .menuImg{
+        background-color: mintcream;
+    }
+    .logo{
+        margin-left: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .show{
+        display: flex;
+        flex-flow: column;
+    }
+    .change{
+        background-image: url(imgs/rx.png);
+    }
+    .dorm_img{
+        width: 300px;
+        height: 200px;
+        margin: 0 10px;
+    }
+}
+
+.arrow{
+    border: solid #291A52;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.arrow-prev{
+    transform:translateY(-50%) rotate(135deg);
+}
+
+.arrow-next{
+    transform:translateY(-50%) rotate(-45deg);
+}
+
+.slide_container .slide_img {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.75s;
+    animation-name: fade;
+    animation-duration: 0.75s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .7
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .7
+    }
+    to {
+        opacity: 1
+    }
+}

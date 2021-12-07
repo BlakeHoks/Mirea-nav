@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirea nav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="navBlock">
+    <div class="menu" id="Menu">
+        <div class="menuItem"><a href="main.html">Главная</a></div>
+        <div class="menuItem"><a href="photos.html">Кампусы</a></div>
+        <div class="menuItem"><a href="map.html">Карта</a></div>
+        <div class="menuItem"><a href="dorm.html">Общежития</a></div>
+        <div class="menuItem"><a href="history.html">История</a></div>
+    </div>
+    <div class="imgs">
+        <a href="main.html"><div class="logo"></div></a>
+        <button id="ddmI" onclick="dropDown()" class="menuImg"></button>
+    </div>
+</div>
+<div class="container containerGal">
+    <h2>Кампус на пр. Вернадского 78</h2>
+    <div class="slide_container" id="sc1">
+        <div class="side_block">
+            <div class="arrow arrow-prev" onclick="minusSlide('sc1')"></div>
+        </div>
+        <img class="slide_img" src="imgs/mirea/1.jpg">
+        <img class="slide_img" src="imgs/mirea/2.jpg">
+        <img class="slide_img" src="imgs/mirea/3.jpg">
+        <img class="slide_img" src="imgs/mirea/4.jpg">
+        <img class="slide_img" src="imgs/mirea/5.jpg">
+        <div class="side_block">
+            <div class="arrow arrow-next" onclick="plusSlide('sc1')"></div>
+        </div>
+    </div>
+    <h2>Кампус на пр. Вернадского 86</h2>
+    <div class="slide_container" id="sc2">
+        <div class="side_block">
+            <div class="arrow arrow-prev" onclick="minusSlide('sc2')"></div>
+        </div>
+        <img class="slide_img" src="imgs/mirea/Ver86/1.jpg">
+        <img class="slide_img" src="imgs/mirea/Ver86/2.jpg">
+        <img class="slide_img" src="imgs/mirea/Ver86/3.jpg">
+        <img class="slide_img" src="imgs/mirea/Ver86/4.jpg">
+        <img class="slide_img" src="imgs/mirea/Ver86/5.jpg">
+        <div class="side_block">
+            <div class="arrow arrow-next" onclick="plusSlide('sc2')"></div>
+        </div>
+    </div>
+    <h2>Кампус на ул. Стромынка 20</h2>
+    <div class="slide_container" id="sc3">
+        <div class="side_block">
+            <div class="arrow arrow-prev" onclick="minusSlide('sc3')"></div>
+        </div>
+        <img class="slide_img" src="imgs/mirea/Str20/1.jpg">
+        <img class="slide_img" src="imgs/mirea/Str20/2.jpg">
+        <img class="slide_img" src="imgs/mirea/Str20/3.jpg">
+        <img class="slide_img" src="imgs/mirea/Str20/4.jpg">
+        <img class="slide_img" src="imgs/mirea/Str20/5.jpg">
+        <div class="side_block">
+            <div class="arrow arrow-next" onclick="plusSlide('sc3')"></div>
+        </div>
+    </div>
+    <h2>Кампус на ул. Малая Пироговская 1</h2>
+    <div class="slide_container" id="sc4">
+        <div class="side_block">
+            <div class="arrow arrow-prev" onclick="minusSlide('sc4')"></div>
+        </div>
+        <img class="slide_img" src="imgs/mirea/Pir/1.jpg">
+        <img class="slide_img" src="imgs/mirea/Pir/2.jpg">
+        <img class="slide_img" src="imgs/mirea/Pir/3.jpeg">
+        <img class="slide_img" src="imgs/mirea/Pir/4.jpg">
+        <img class="slide_img" src="imgs/mirea/Pir/5.jpg">
+        <div class="side_block">
+            <div class="arrow arrow-next" onclick="plusSlide('sc4')"></div>
+        </div>
+    </div>
+    <h2>Военный учебный центр РТУ МИРЭА</h2>
+    <div class="slide_container" id="sc5">
+        <div class="side_block">
+            <div class="arrow arrow-prev" onclick="minusSlide('sc5')"></div>
+        </div>
+        <img class="slide_img" src="imgs/mirea/Vuc/1.jpg">
+        <img class="slide_img" src="imgs/mirea/Vuc/2.jpeg">
+        <img class="slide_img" src="imgs/mirea/Vuc/3.jpg">
+        <img class="slide_img" src="imgs/mirea/Vuc/4.JPG">
+        <img class="slide_img" src="imgs/mirea/Vuc/5.jpg">
+        <div class="side_block">
+            <div class="arrow arrow-next" onclick="plusSlide('sc5')"></div>
+        </div>
+    </div>
+</div>
+<script>
+    /* Индекс слайдов по умолчанию */
+    var slideIndex1 = 1;
+    var slideIndex2 = 1;
+    var slideIndex3 = 1;
+    var slideIndex4 = 1;
+    var slideIndex5 = 1;
+    showSlides(slideIndex1, "sc1");
+    showSlides(slideIndex2, "sc2");
+    showSlides(slideIndex3, "sc3");
+    showSlides(slideIndex4, "sc4");
+    showSlides(slideIndex5, "sc5");
+
+
+    /* Функция увеличивает индекс на 1, показывает следующй слайд*/
+    function getSlideIndexP(id){
+        switch (id) {
+            case "sc1":
+                slideIndex1 += 1;
+                if (slideIndex1 > 5) {
+                    slideIndex1 = 1
+                }
+                return slideIndex1;
+            case "sc2":
+                slideIndex2 += 1;
+                if (slideIndex2 > 5) {
+                    slideIndex2 = 1
+                }
+                return slideIndex2;
+            case "sc3":
+                slideIndex3 += 1;
+                if (slideIndex3 > 5) {
+                    slideIndex3 = 1
+                }
+                return slideIndex3;
+            case "sc4":
+                slideIndex4 += 1;
+                if (slideIndex4 > 5) {
+                    slideIndex4 = 1
+                }
+                return slideIndex4;
+            case "sc5":
+                slideIndex5 += 1;
+                if (slideIndex5 > 5) {
+                    slideIndex5 = 1
+                }
+                return slideIndex5;
+        }
+    }
+
+    function getSlideIndexM(id){
+        switch (id) {
+            case "sc1":
+                slideIndex1 -= 1;
+                if (slideIndex1 < 1) {
+                    slideIndex1 = 5
+                }
+                return slideIndex1;
+            case "sc2":
+                slideIndex2 -= 1;
+                if (slideIndex2 < 1) {
+                    slideIndex2 = 5
+                }
+                return slideIndex2;
+            case "sc3":
+                slideIndex3 -= 1;
+                if (slideIndex3 < 1) {
+                    slideIndex3 = 5
+                }
+                return slideIndex3;
+            case "sc4":
+                if (slideIndex4 < 1) {
+                    slideIndex4 = 5
+                }
+                slideIndex4 -= 1;
+                return slideIndex4;
+            case "sc5":
+                slideIndex5 -= 1;
+                if (slideIndex5 < 1) {
+                    slideIndex5 = 5
+                }
+                return slideIndex5;
+        }
+    }
+
+    function plusSlide(id) {
+        showSlides(getSlideIndexP(id), id);
+    }
+
+    /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+    function minusSlide(id) {
+        showSlides(getSlideIndexM(id), id);
+    }
+
+    /* Основная функция слайдера */
+    function showSlides(n, id) {
+        var i;
+        var slides = document.getElementById(id).getElementsByClassName("slide_img")
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[n - 1].style.display = "block";
+    }
+</script>
+</body>
+</html>
